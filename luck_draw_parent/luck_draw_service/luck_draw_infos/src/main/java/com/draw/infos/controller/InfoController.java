@@ -81,4 +81,11 @@ public class InfoController {
         List<Info>  infos=infoService.findAll();
         return new Result(true, StatusCode.OK, "查询成功",infos );
     }
+
+
+    @RequestMapping("info/updateOpen")
+    public Result updateOpen(@RequestParam("did")String id){
+        infoService.updateOpen(id);
+        return new Result(true,StatusCode.OK,"修改成功");
+    }
 }

@@ -16,4 +16,8 @@ public interface UserMapper extends Mapper<User> {
 
     @Select("select head from cj_user where id  in (select  user_id  as uid from cj_draw_user where draw_id=#{id})")
     List<String> findJoinUserHead(@Param("id") String id);
+
+
+    @Select("select  * from cj_user  where id=#{id}")
+    User findUser(@Param("id") String id);
 }

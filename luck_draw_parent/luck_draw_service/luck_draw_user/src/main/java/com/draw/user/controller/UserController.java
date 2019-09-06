@@ -2,6 +2,7 @@ package com.draw.user.controller;
 
 
 import com.draw.entity.Result;
+import com.draw.entity.StatusCode;
 import com.draw.user.pojo.User;
 import com.draw.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,5 +30,11 @@ public class UserController {
     public List<String> findJoinUserHead(String id){
         List<String>  headers=userService.findJoinUserHead(id);
         return headers;
+    }
+
+    @RequestMapping("/findUser")
+    public Result findUser(@RequestParam("id") String id){
+        User  user=userService.findUser(id);
+        return new Result(true, StatusCode.OK,"",user);
     }
 }

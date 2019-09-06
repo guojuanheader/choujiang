@@ -17,7 +17,7 @@ public class Info {
     private String  openType;
     private String  des;
     private Integer   joinNum;
-
+    private Integer   isOpen;
     public Integer getJoinNum() {
         return joinNum;
     }
@@ -80,5 +80,13 @@ public class Info {
 
     public void setDes(String des) {
         this.des = des;
+    }
+
+    public Integer getIsOpen() {
+        return isOpen;
+    }
+
+    public void setIsOpen(Integer isOpen) {
+        this.isOpen = isOpen;
     }
 }

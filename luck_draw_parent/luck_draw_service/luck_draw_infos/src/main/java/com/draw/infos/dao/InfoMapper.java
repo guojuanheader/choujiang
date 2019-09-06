@@ -17,6 +17,10 @@ public interface InfoMapper extends Mapper<Info> {
     @Select("SELECT id,name,des, open_time as openTime,open_num as openNum,win_num as winNum,open_way as openType,join_num  as joinNum FROM cj_draw where id=324324324")
     Info findById(@Param("id") String id);
 
-    @Select("select * from cj_draw")
+    @Select("select * from cj_draw  where  is_open='0'")
     List<Info> findAll();
+
+
+    @Update("update cj_draw  set is_open=1  where id=#{id}")
+    void updateOpen(@Param("id")String id);
 }

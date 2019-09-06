@@ -15,6 +15,13 @@ public interface InfoFeign {
     @RequestMapping("info/update")
     public void update(@RequestParam("did") String did);
 
-    @RequestMapping("/all")
+    @RequestMapping("info/all")
     public Result findAll();
+
+    @RequestMapping("userAndDraw/findUid")
+    public Result findUid(@RequestParam("code")Long code,@RequestParam("did")String  did);
+
+
+    @RequestMapping("info/updateOpen")
+    public Result updateOpen(@RequestParam("did")String id);
 }

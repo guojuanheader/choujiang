@@ -37,5 +37,10 @@ public class InfoServiceImpl implements InfoService {
         return infoMapper.findAll();
     }
 
+    @Override
+    public void updateOpen(String id) {
+        infoMapper.updateOpen(id);
+    }
+
 
 }
