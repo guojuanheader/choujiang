@@ -1,6 +1,7 @@
 package com.draw.user.feign;
 
 
+import com.draw.entity.Result;
 import com.draw.user.pojo.User;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,4 +20,7 @@ public interface UserFeign {
 
     @RequestMapping("/user/findJoinUserHead")
     public List<String> findJoinUserHead(String id);
+
+    @RequestMapping("user/findUser")
+    public Result findUser(@RequestParam("id") String id);
  }

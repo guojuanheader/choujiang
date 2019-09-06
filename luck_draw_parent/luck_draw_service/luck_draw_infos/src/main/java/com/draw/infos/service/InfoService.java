@@ -11,4 +11,6 @@ public interface InfoService {
     void update(String did);
 
     List<Info> findAll();
+
+    void updateOpen(String id);
 }

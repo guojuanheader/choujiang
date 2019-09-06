@@ -26,4 +26,9 @@ public class UserServiceImpl  implements UserService {
         List<String> heads=userMapper.findJoinUserHead(id);
         return heads;
     }
+
+    @Override
+    public User findUser(String id) {
+        return userMapper.findUser(id);
+    }
 }

@@ -10,7 +10,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 
 @SpringBootApplication
 @EnableEurekaClient
-@EnableFeignClients(basePackages = "com.draw.infos.feign")
+@EnableFeignClients(basePackages = {"com.draw.infos.feign","com.draw.user.feign"})
 @MapperScan(basePackages = {"com.changgou.open.dao"})
 @EnableScheduling    //开启定时任务
 public class OpenApplication {

@@ -10,9 +10,12 @@ import java.util.List;
 
 public interface UserAndDrawMapper extends Mapper<UserAndDraw> {
 
-    @Select("select uid from cj_draw_user where did =#{id}")
+    @Select("select user_id from cj_draw_user where draw_id =#{id}")
     List<String> findUid(@Param("id") String id);
 
     @Insert("insert into cj_draw_user(id,user_id,draw_id,draw_code) values(#{id},#{uid},#{did},#{drawCode}) ")
     void insertTeam(UserAndDraw userAndDraw);
+
+    @Select("select user_id from cj_draw_user where draw_id =#{did} and draw_code=#{code}")
+    String findUid(@Param("code") Long code, @Param("did") String did);
 }

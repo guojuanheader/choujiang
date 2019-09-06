@@ -67,11 +67,10 @@ public class JoinServiceImpl implements JoinService {
         Long code = redisTemplate.boundHashOps("code").increment(did, 1);
         //code +=10000;
         //long mycode = getCode();//这儿走1次
-        // redisTemplate.boundHashOps(uid).put(did, code);
+        redisTemplate.boundHashOps(did).put(uid, code);
         //user和draw关联表增加数据，user得抽奖码
         UserAndDraw userAndDraw = new UserAndDraw();
         userAndDraw.setId(UUID.randomUUID().toString());
-        //不能这么干   uuid 是什么了 一堆字符串
         userAndDraw.setUid(uid);
         userAndDraw.setDid(did);
         userAndDraw.setDrawCode(code + 10000);
