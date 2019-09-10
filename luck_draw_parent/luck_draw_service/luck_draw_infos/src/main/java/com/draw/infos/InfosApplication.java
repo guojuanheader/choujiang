@@ -1,7 +1,6 @@
 package com.draw.infos;
 
 
-import com.draw.infos.util.TokenDecode;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -20,8 +19,4 @@ public class InfosApplication {
     }
 
 
-    @Bean
-    public TokenDecode  tokenDecode(){
-        return new TokenDecode();
-    }
 }

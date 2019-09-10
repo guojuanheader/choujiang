@@ -16,6 +16,7 @@
         <module>luck_draw_eureka</module>
         <module>luck_draw_gateway</module>
         <module>luck_draw_task</module>
+        <module>luck_draw_fascar</module>
     </modules>
 
 

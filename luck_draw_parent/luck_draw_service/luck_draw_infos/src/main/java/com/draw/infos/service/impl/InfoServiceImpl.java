@@ -4,7 +4,6 @@ import com.draw.infos.dao.InfoMapper;
 import com.draw.infos.dao.UserAndDrawMapper;
 import com.draw.infos.pojo.Info;
 import com.draw.infos.service.InfoService;
-import com.draw.infos.util.TokenDecode;
 import com.draw.user.feign.UserFeign;
 import com.draw.user.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,8 +37,9 @@ public class InfoServiceImpl implements InfoService {
     }
 
     @Override
-    public void updateOpen(String id) {
-        infoMapper.updateOpen(id);
+    public void updateOpen(String id,Long  code) {
+        int code1=Integer.parseInt(String.valueOf(code));
+        infoMapper.updateOpen(id,code1);
     }
 
 

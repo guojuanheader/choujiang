@@ -14,13 +14,13 @@ public interface InfoMapper extends Mapper<Info> {
     void update(@Param("did") String did);
 
 
-    @Select("SELECT id,name,des, open_time as openTime,open_num as openNum,win_num as winNum,open_way as openType,join_num  as joinNum FROM cj_draw where id=324324324")
+    @Select("SELECT id,name,des, open_time as openTime,open_num as openNum,win_num as winNum,open_way as openType,join_num  as joinNum FROM cj_draw where id=#{id}")
     Info findById(@Param("id") String id);
 
-    @Select("select * from cj_draw  where  is_open='0'")
+    @Select("select id,name,des, open_time as openTime,open_num as openNum,win_num as winNum,open_way as openType,join_num  as joinNum from cj_draw  where  is_open='0'")
     List<Info> findAll();
 
 
-    @Update("update cj_draw  set is_open=1  where id=#{id}")
-    void updateOpen(@Param("id")String id);
+    @Update("update cj_draw  set is_open=1,win_num=#{code}  where id=#{id}")
+    void updateOpen(@Param("id")String id,@Param("code") Integer code);
 }
