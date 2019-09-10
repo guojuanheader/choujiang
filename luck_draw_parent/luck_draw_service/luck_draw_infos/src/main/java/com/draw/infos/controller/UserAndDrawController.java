@@ -16,7 +16,7 @@ public class UserAndDrawController {
     @Autowired
     private UserAndDrawService  userAndDrawService;
 
-    @RequestMapping("userAndDraw/findUid")
+    @RequestMapping("/findUid")
     public Result findUid(@RequestParam("code")Long code, @RequestParam("did")String  did){
         String  uid=userAndDrawService.findUid(code, did);
         return new Result(true, StatusCode.OK,"查询成功",uid);

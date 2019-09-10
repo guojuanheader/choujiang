@@ -33,7 +33,7 @@ public class AuthController {
     @Value("${auth.cookieMaxAge}")
     private int cookieMaxAge;
 
-   /* @GetMapping("/toLogin")
+    /*@GetMapping("/toLogin")
     //required为false表示参数不一定有，defaultValue默认值
     public String toLogin(@RequestParam(name = "from",required = false,defaultValue = "") String from, Model model){
         model.addAttribute("from",from);

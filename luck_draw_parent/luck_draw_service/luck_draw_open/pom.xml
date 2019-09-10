@@ -27,6 +27,12 @@
             <artifactId>luck_draw_user_api</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <!--fescar依赖-->
+        <dependency>
+            <groupId>com.draw</groupId>
+            <artifactId>luck_draw_fascar</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
 </project>

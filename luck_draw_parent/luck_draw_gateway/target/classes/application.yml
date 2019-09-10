@@ -36,6 +36,7 @@ spring:
             - Path=/api/user/**
           filters:
             - StripPrefix=1
+        #参加抽奖
         - id: draw_join
           uri: lb://join
           predicates:

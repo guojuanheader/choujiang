@@ -23,5 +23,5 @@ public interface InfoFeign {
 
 
     @RequestMapping("info/updateOpen")
-    public Result updateOpen(@RequestParam("did")String id);
+    public Result updateOpen(@RequestParam("did")String id,@RequestParam("code") Long  code);
 }

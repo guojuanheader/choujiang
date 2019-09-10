@@ -12,5 +12,5 @@ public interface InfoService {
 
     List<Info> findAll();
 
-    void updateOpen(String id);
+    void updateOpen(String id,Long  code);
 }
